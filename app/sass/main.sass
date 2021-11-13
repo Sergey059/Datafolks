@@ -1,0 +1,65 @@
+@use 'sass:math'
+@import config
+
+// GENERAL DOCUMENT STYLES
+
+
+
+html
+	min-height: 100vh
+	height: 100%
+body
+	height: 100%
+	min-width: 320px
+	position: relative
+	display: flex
+	flex-direction: column
+	font-family: $reg
+	font-size: 16px
+	line-height: $lineheight
+	color: $textcolor
+	overflow-x: hidden
+	scroll-behavior: smooth
+	@include media-breakpoint-up(sm)
+		font-size: $fontsize
+.content
+	margin-bottom: 6.7rem
+	max-width: 1650px
+	flex: 1 0 auto
+.no-scroll
+	overflow: hidden
+a
+	transition: $transition
+ul, ol
+	margin: 0
+	padding: 0
+	list-style-type: none
+.container
+	@include media-breakpoint-up(xl)
+		max-width: 1220px
+.btn
+	&__all
+		display: block
+		min-width: 300px
+		min-height: 60px
+		font-family: $bold
+		font-size: 1rem
+		border-width: 3px
+		&_dark
+			border-color: #182a4c
+			&:hover
+				background: #182a4c
+				color: $white
+		&_white
+			border-color: $white
+			color: $white
+			&:hover
+				background: $white
+				color: #182a4c
+		@include media-breakpoint-up(xl)
+			min-width: 362px
+
+@import '../components/header/style'
+@import '../components/cards/style'
+@import '../components/footer/style'
+@import '../components/form/style'

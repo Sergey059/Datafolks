@@ -1,0 +1,19 @@
+.card
+	cursor: pointer
+	&-img__hover
+		transition: filter $transition
+	&:hover
+		.card-img__hover
+			filter: brightness(50%)
+	&__title
+		margin-bottom: 8%
+		font-family: $bold
+		font-size: 1.33rem
+		bottom: 0
+		@include media-breakpoint-down(md)
+		font-size: 1.1rem
+.modal
+	&__img
+		width: 100%
+		height: auto
+		

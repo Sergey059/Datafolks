@@ -1,0 +1,19 @@
+extends templates/base
+//- Переменные
+block variables
+	- let title = 'Реализованные проекты'
+	- let desc = 'Описание страницы реализованные проекты'
+	- let isPage = 1
+
+
+block content
+	.content.mx-auto
+		include ../components/cards/index
+		button.btn__all.btn__all_dark.btn.btn-outline.mx-auto.text-uppercase.rounded-0(type='button') Загрузить еще
+
+
+
+
+
+		
+		

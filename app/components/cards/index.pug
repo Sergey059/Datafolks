@@ -1,0 +1,24 @@
+-
+	let cards = [
+		{title:"Республика Саха", img:"/images/dist/saha.jpg", text:"Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. Подзаголовок, свое необходимыми, строчка осталось переписали заголовок послушавшись прямо большого журчит реторический, рукописи точках."},
+		{title:"Газпром", img:"/images/dist/gazprom.jpg", text:"Далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. Подзаголовок, свое необходимыми, строчка осталось переписали заголовок послушавшись прямо большого журчит реторический, рукописи точках."},
+		{title:"Nokia", img:"/images/dist/nokia.jpg", text:"Подзаголовок, свое необходимыми, строчка осталось переписали заголовок послушавшись прямо большого журчит реторический, рукописи точках."}
+	]
+
+
+.card-group.mb-5.mb-5.pt-4.pb-4
+	.row.no-gutters.flex-column.flex-md-row
+		each card,i in cards
+			.col
+				.card.position-relative.border-0(data-toggle="modal" data-target='#exampleModalCenter' + i) 
+					img.card-img.card-img__hover.rounded-0(src=card.img, alt=card.title)
+					h2.card__title.card-title.w-100.position-absolute.text-uppercase.text-center.text-white #{card.title}
+					.card__modal
+						.modal.fade(id='exampleModalCenter' + i, tabindex='-1', role='dialog',aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+							.modal-dialog.modal-dialog-centered(role='document')
+								.modal-content
+									.modal-header
+										h5#exampleModalLongTitle.modal-title #{card.title}
+									.modal-body
+										img.modal__img.mb-2(src=card.img, alt=card.title)
+										p.modal__desc.mb-0 #{card.text}
